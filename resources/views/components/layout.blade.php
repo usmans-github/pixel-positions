@@ -17,7 +17,7 @@
             <div><a href="/"><img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""></a></div>
             {{-- Links --}}
             <div class="space-x-6">
-                <a href="#">Jobs</a>
+                <a href="/">Jobs</a>
                 <a href="#">Careers</a>
                 <a href="#">Salaries</a>
                 <a href="#">Companies</a>
