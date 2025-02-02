@@ -18,9 +18,9 @@ class EmployerFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name,
-            'logo' => fake()->imageUrl(),
+            'name' => fake()->company(),
+            'logo' => fake()->imageUrl(100, 100, 'business', true, 'employer-logo'),
             'user_id' => User::factory()
-        ];
+        ];  
     }
 }
