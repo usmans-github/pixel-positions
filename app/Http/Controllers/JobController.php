@@ -20,8 +20,8 @@ class JobController extends Controller
         $jobs = Job::latest()->with(['employer', 'tags'])->get()->groupBy('featured');
 
         return view('jobs.index', [
-            'featuredJobs' => $jobs[0],
-            'jobs' => $jobs[1],
+            'featuredJobs' => $jobs[1],
+            'jobs' => $jobs[0],
             'tags' => Tag::all()
         ]);
     }
@@ -42,11 +42,11 @@ class JobController extends Controller
         // dd($request->all());
         $attributes = $request->validate([
             'title' => ['required'],
-            'salary' => ['required'],
+            'salary' => ['required'],                                                                                         
             'location' => ['required'],
             'schedule' => ['required', Rule::in(['Part Time', 'Full Time'])],
-            'url' => ['required', 'active_url'],
-            'tags' => ['nullable']
+            'url' => ['required'],
+            'tags' => ['nullable']  
         ]);
 
         $attributes['featured'] = $request->has('featured');

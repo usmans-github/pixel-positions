@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Employer;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Soap\Url;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Job>
